@@ -20,9 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
+        
+      - name: Enable Corepack
+        run: Corepack enable
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
+      - name: Install ni
+        run: npm i -g @antfu/ni@latest
 
       - name: Cache node modules
         uses: actions/cache@v4
@@ -31,10 +34,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.json') }}
 
       - name: Install dependencies
-        run: pnpm i
+        run: ni
 
       - name: Build
-        run: pnpm build
+        run: nr build
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

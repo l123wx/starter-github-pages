@@ -14,10 +14,10 @@ defineOptions({
 })
 
 onMounted(() => {
-  console.log('[About] onMounted')
+  console.log('[Index] onMounted')
 })
 
 onActivated(() => {
-  console.log('[About] onActivated')
+  console.log('[Index] onActivated')
 })
 </script>
