@@ -1,4 +1,5 @@
 <template>
+  Press F12 Open Console
   <router-view v-slot="{ Component, route }">
     <h3>cacheList: {{ cacheList }}</h3>
     <div style="display: flex; column-gap: 20px">
