@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, KeepAlive } from 'vue';
+import { ref } from 'vue';
 
 const cacheList = ref<string[]>([])
 </script>
